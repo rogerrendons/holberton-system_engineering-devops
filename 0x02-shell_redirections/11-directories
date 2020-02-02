@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a find . wc -l
+find -path "*/*" type d | wc -l
