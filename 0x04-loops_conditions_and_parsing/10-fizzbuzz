@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Show fizzbuzz
+
+for ((Cont=1; Cont<=100; Cont=Cont+1))
+do
+    if [ $((Cont % 3)) -eq 0 ] && [ $((Cont % 5)) -eq 0 ]
+    then
+		echo "FizzBuzz"
+    elif [ $((Cont % 3)) -eq 0 ]
+    then
+		echo "Fizz"
+    elif [ $((Cont % 5)) -eq 0 ]
+    then
+		echo "Buzz"
+    else
+	echo $Cont
+    fi
+done
