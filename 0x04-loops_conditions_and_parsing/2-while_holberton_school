@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Show 10 times "Holberton School".
+
+Cont=0
+while [  $Cont -lt 10 ]; do
+	echo "Holberton School"
+	let Cont=Cont+1
+done
