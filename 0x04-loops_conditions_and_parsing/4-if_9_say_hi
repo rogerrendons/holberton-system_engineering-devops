@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Show 10 times a message "Holberton School" in 9 item Show Hi.
 
-
-
 Cont=0
 while [  $Cont -lt 10 ]; do
 	echo "Holberton School"

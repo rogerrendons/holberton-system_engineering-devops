@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Show 10 times "Holberton School".
+# Show 10 times a message "Holberton School".
 
 Cont=0
 while [  $Cont -lt 10 ]; do
