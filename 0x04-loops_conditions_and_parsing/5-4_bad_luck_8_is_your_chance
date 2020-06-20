@@ -5,10 +5,10 @@ Cont=0
 while [  $Cont -lt 10 ]; do
 	if [ $Cont -eq 3 ]
 	then
-	echo "bad luck"
+		echo "bad luck"
 	elif [ $Cont -eq 7 ]
 	then
-	echo "good luck"
+		echo "good luck"
 	else
 		echo "Holberton School"
 	fi
