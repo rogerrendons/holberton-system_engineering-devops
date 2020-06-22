@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
-# Make a file
-trap 'echo "I hate the kill command"; sudo rm /var/run/holbertonscript.pid; exit' TERM
-trap 'echo "Y U no love me?!"' INT
-echo "$(pgrep -f 9-process_and_pid_file) | sudo tee /var/run/holbertonscript.pid > /dev/null"
+# Make file holbertonscript.pid
 
-# shellcheck disable=SC2078
-
+echo $$ > /var/run/holbertonscript.pid
+trap 'echo "I hate the kill command" && rm /var/run/holbertonscript.pid && exit' SIGTERM 
+trap 'echo "Y U no love me?!"' SIGINT 
+trap 'rm  /var/run/holbertonscript.pid && exit' SIGQUIT
 while true
 do
-    echo "To infinity and beyond"
-    sleep 2
+	echo "To infinity and beyond"
+	sleep 2
 done
