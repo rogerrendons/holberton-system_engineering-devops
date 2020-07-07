@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# show ip addr in this machine
+
+ifconfig | grep "inet addr:" | cut -d':' -f2 | awk '{print $1}'
