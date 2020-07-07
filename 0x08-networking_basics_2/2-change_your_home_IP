@@ -15,4 +15,4 @@ echo "$FB" >> $HNEW
 
 cp -f "$HNEW" "$HOLD"
 
-rm -f "$HNEW"
+sudo rm -f "$HNEW"
