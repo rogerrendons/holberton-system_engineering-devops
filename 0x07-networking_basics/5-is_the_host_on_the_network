@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This cript pings an IP address 5 times
+# pings 5 times
 
 Dir=$1
 if [ -z "$Dir" ]
