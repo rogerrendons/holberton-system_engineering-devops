@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Show 10 times a message "Holberton School" in 4 item Show bad luck, in 8 item Show good luck.
+
+Cont=0
+while [  $Cont -lt 10 ]; do
+	if [ $Cont -eq 3 ]
+	then
+		echo "bad luck"
+	elif [ $Cont -eq 7 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	let Cont=Cont+1
+done

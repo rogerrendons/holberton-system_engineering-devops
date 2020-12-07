@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Show 10 times a message "Holberton School".
+
+Cont=10
+until [  $Cont -lt 1 ]; do
+	echo "Holberton School"
+	let Cont-=1
+done

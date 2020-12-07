@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Changes hosts file localhost facebook 
+
+PathHost=/etc/hosts
+NewHost=~/hosts.new
+LocHos="127.0.0.2	localhost"
+Facebook="8.8.8.8	facebook.com"
+cp -f  "$PathHost" "$NewHost"
+
+sed -i '/localhost/d' $NewHost
+sed -i '/facebook.com/d' $NewHost
+
+echo "$LocHos" >> $NewHost
+echo "$Facebook" >> $NewHost
+
+cp -f "$NewHost" "$PathHost"
+
+sudo rm -f "$NewHost"

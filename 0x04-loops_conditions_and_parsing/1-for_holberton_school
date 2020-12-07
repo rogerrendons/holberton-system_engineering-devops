@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Show 10 times a message "Holberton School".
+
+for ((i = 0; i < 10; i++))
+do
+	echo "Holberton School"
+done
