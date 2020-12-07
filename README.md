@@ -1,1 +1,0 @@
-Commanmds Shell Linux with scriptsx

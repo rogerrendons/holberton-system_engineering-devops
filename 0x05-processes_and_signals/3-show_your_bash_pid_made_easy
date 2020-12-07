@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Show the PID
-pgrep -l bash

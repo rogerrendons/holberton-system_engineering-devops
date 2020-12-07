@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# Show "To infinity and beyond" repeatly.
-
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
-done

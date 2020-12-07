@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Show all processes
-ps -e --forest xu
