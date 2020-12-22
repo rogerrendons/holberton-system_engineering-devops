@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
-# Install Nginx and redirect a page.
-apt-get update && apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-echo "Holberton School" > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
-service nginx restart
-sed -i '/listen \[::\]:80 default_server;/aadd_header X-Served-By $hostname;\nlocation /redirect_me {\nrewrite ^ https://www.youtube.com/watch?v=dJMVtwbriK0 permanent;\n}\n\nerror_page 404 /custom_404.html;\nlocation = /custom_404.html {\ninternal;\n}' /etc/nginx/sites-available/default
-service nginx restart
+# Install and Configure HAproxy on lb-01.
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo echo 'ENABLED=1' |sudo tee -a /etc/default/haproxy
+sudo echo "
+frontend front
+    bind *:80
+    mode http
+    default_backend back
+backend back
+    balance roundrobin
+    server 2003-web-01 35.196.29.78:80 check
+    server 2003-web-02 35.231.126.72:80 check
+"    | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo service haproxy restart 
