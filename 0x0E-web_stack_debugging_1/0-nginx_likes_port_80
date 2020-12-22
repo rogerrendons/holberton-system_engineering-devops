@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script to debug an nginx server to listen to port 80
+# Debug nginx server port 80
 sudo service nginx stop
 sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
