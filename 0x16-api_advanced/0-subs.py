@@ -6,7 +6,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     """Reddit API returns subscribers"""
-    response = requests.get("https://www.reddit.com/r/{ }/about.json"
+    response = requests.get("https://www.reddit.com/r/{}/about.json"
                             .format(subreddit), headers={'User-agent': 'Hi'})
     if not response:
         return 0
