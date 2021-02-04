@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Recursive to returns a list titles of all hot articles """
 
-
 import requests
+
 
 def recurse(subreddit, hot_list=[], after=None):
     """ Recursive to returns a list titles of all hot articles """
